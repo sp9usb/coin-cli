@@ -1,9 +1,13 @@
 {
   "name": "@sp9usb/coin-cli",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "author": {
     "email": "sp9usb@gmail.com",
     "name": "sp9usb"
+  },
+  "keywords": ["bitcoin", "ethereum", "btc", "eth", "coin", "altcoin" ],
+  "publishConfig": {
+    "access": "public"
   },
   "repository": {
     "url": "https://github.com/sp9usb/coin-cli"
