@@ -9,4 +9,3 @@ module.exports = async function generateQrCodeFrom(str) {
         });
     });
 }
-

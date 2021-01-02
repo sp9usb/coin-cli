@@ -10,7 +10,6 @@ module.exports = function addressService(privateKey, hashValidator) {
     const address = ethUtil.Address.fromPrivateKey(privateKeyBuffer);
 
     return {
-        'getAddress': () => address.toString(),
-        'getAddressAsBuffer': () => address.toBuffer()
+        'getAddress': () => address.toString()
     };
 };
