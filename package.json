@@ -1,6 +1,15 @@
 {
   "name": "@sp9usb/coin-cli",
   "version": "0.0.1",
+  "author": {
+    "email": "sp9usb@gmail.com",
+    "name": "sp9usb"
+  },
+  "repository": {
+    "url": "https://github.com/sp9usb/coin-cli"
+    ,"type": "git"
+  },
+  "homepage": "https://github.com/sp9usb/coin-cli",
   "bin": {
     "coin-cli": "./src/index.js"
   },
