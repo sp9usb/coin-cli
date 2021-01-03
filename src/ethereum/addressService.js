@@ -7,9 +7,12 @@ module.exports = function addressService(privateKey, hashValidator) {
     if (!hashValidator(privateKey)) throw 'The private key hash is not valid';
 
     const privateKeyBuffer = Buffer.from(privateKey, 'hex');
-    const address = ethUtil.Address.fromPrivateKey(privateKeyBuffer);
+    const address = ethUtil.addHexPrefix(ethUtil.privateToAddress(privateKeyBuffer).toString('hex'));
+    if (!ethUtil.isValidAddress(address)) throw new Error('The address is invalid');
+    const addressWithChecksum = ethUtil.toChecksumAddress(address);
+    if (!ethUtil.isValidChecksumAddress(addressWithChecksum)) throw new Error('The address is invalid');    
 
     return {
-        'getAddress': () => address.toString()
+        'getAddress': () => addressWithChecksum
     };
 };

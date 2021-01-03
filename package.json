@@ -1,17 +1,24 @@
 {
   "name": "@sp9usb/coin-cli",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": {
     "email": "sp9usb@gmail.com",
     "name": "sp9usb"
   },
-  "keywords": ["bitcoin", "ethereum", "btc", "eth", "coin", "altcoin" ],
+  "keywords": [
+    "bitcoin",
+    "ethereum",
+    "btc",
+    "eth",
+    "coin",
+    "altcoin"
+  ],
   "publishConfig": {
     "access": "public"
   },
   "repository": {
-    "url": "https://github.com/sp9usb/coin-cli"
-    ,"type": "git"
+    "url": "https://github.com/sp9usb/coin-cli",
+    "type": "git"
   },
   "homepage": "https://github.com/sp9usb/coin-cli",
   "bin": {
@@ -24,10 +31,10 @@
     "mocha": "^8.2.1"
   },
   "dependencies": {
-    "ethereumjs-util": "^7.0.7",
+    "ethereumjs-util": "7.0.7",
     "js-fire": "^0.7.4",
-    "keccak": "^3.0.1",
-    "prompt": "^1.1.0",
-    "qrcode-terminal": "^0.12.0"
+    "keccak": "3.0.1",
+    "prompt": "1.1.0",
+    "qrcode-terminal": "0.12.0"
   }
 }
