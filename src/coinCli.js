@@ -1,4 +1,4 @@
-const stdinPrivateKeyReader = require('./stdinPrivateKeyReader');
+const stdinPasswordReader = require('./stdinPasswordReader');
 const ethereumAddressService = require('./ethereum/addressService');
 const ethereumPrivateKeyService = require('./ethereum/privateKeyService');
 
@@ -18,8 +18,8 @@ const coinCli = {
         getMyAddress: async (privateKey = null, asQrCode = false) => {
 
             if (!privateKey) {
-                console.log('Put the private key as phrase to generate private key hash: ');
-                const privateKeyAsString = (await stdinPrivateKeyReader()).toLowerCase();
+                console.log('Put the password phrase to generate private key hash: ');
+                const privateKeyAsString = await stdinPasswordReader();
                 privateKey = ethereumPrivateKeyService(privateKeyAsString);
             }
             if (!isValidHash(privateKey)) throw 'Private key is not valid';
@@ -36,8 +36,8 @@ const coinCli = {
 
         getWalletInfo: async (privateKey = null) => {
             if (!privateKey) {
-                console.log('Put the private key as phrase to generate private key hash: ');
-                const privateKeyAsString = (await stdinPrivateKeyReader()).toLowerCase();
+                console.log('Put the password phrase to generate private key hash: ');
+                const privateKeyAsString = await stdinPasswordReader();
                 privateKey = ethereumPrivateKeyService(privateKeyAsString);
             }
             if (!isValidHash(privateKey)) throw 'Private key is not valid';
