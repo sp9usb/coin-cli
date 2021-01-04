@@ -1,6 +1,6 @@
 {
   "name": "@sp9usb/coin-cli",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": {
     "email": "sp9usb@gmail.com",
     "name": "sp9usb"
@@ -11,7 +11,9 @@
     "btc",
     "eth",
     "coin",
-    "altcoin"
+    "altcoin",
+    "brain wallet",
+    "wallet"
   ],
   "publishConfig": {
     "access": "public"
@@ -21,9 +23,11 @@
     "type": "git"
   },
   "homepage": "https://github.com/sp9usb/coin-cli",
+  "main": "./src/index.js",
   "bin": {
     "coin-cli": "./src/index.js"
   },
+  "description": "This tool was created as simple offline application to generate wallet for Ethereum from phrases or private keys. The application is created in the 'UNIX metodology' as simple tool without bells and whistles.",
   "scripts": {
     "test": "npx mocha tests/**/*.spec.js"
   },
